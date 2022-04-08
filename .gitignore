@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+english_cleaned_lyrics.csv
+original_cleaned_lyrics.csv
+dataset/
