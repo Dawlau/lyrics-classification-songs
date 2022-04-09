@@ -12,5 +12,5 @@ class TokenizeTransformer(object):
 		self.tokenizer = tokenizer
 
 
-	def __call__(self, string):
+	def __call__(self, sample):
 		return self.tokenizer(string)

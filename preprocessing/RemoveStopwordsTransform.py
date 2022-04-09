@@ -8,5 +8,5 @@ class RemoveStopwordsTransform(object):
 		self.stop_words = stopwords.words(language)
 
 
-	def __call__(self, tokens):
+	def __call__(self, sample):
 		return [token for token in tokens if token not in self.stop_words]
