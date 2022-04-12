@@ -131,3 +131,4 @@ dmypy.json
 english_cleaned_lyrics.csv
 original_cleaned_lyrics.csv
 dataset/
+glove.6B.100d.txt

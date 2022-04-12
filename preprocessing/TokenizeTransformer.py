@@ -1,4 +1,4 @@
-
+import numpy as np
 
 
 class TokenizeTransformer(object):
@@ -12,5 +12,5 @@ class TokenizeTransformer(object):
 		self.tokenizer = tokenizer
 
 
-	def __call__(self, sample):
-		return self.tokenizer(string)
+	def __call__(self, strings):
+		return [self.tokenizer(sample) for sample in strings]
