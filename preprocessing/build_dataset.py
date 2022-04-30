@@ -21,7 +21,7 @@ def get_label_encoder(path_to_dataset):
 	return  LabelEncoder().fit(y)
 
 
-def get_dataset_splits(path_to_dataset, train_size_p, val_size_p):
+def get_dataset_splits(path_to_dataset, train_size_p, val_size_p=0.0):
 	dataset = pd.read_csv(path_to_dataset)
 	dataset = dataset[dataset["year"] >= THRESHOLD_YEAR]
 	dataset = dataset[dataset["genre"].isin(LABELS)]
@@ -37,6 +37,10 @@ def get_dataset_splits(path_to_dataset, train_size_p, val_size_p):
 		random_state=SEED,
 		stratify=y
 	)
+
+	if val_size_p == 0:
+		X_test, y_test = X, y
+		return X_train, y_train, X_test, y_test
 
 	X_val, X_test, y_val, y_test = train_test_split(
 		X,
