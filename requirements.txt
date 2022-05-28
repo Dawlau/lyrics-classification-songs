@@ -12,3 +12,4 @@ seaborn
 numpy
 protobuf~=3.19.0
 tensorboard
+spacy
