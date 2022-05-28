@@ -1,0 +1,14 @@
+pandas
+matplotlib
+torch
+torchaudio
+nltk
+sklearn
+ipykernel
+ipywidgets
+torchvision
+sklearn
+seaborn
+numpy
+protobuf~=3.19.0
+tensorboard
